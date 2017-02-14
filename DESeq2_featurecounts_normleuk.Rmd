@@ -11,6 +11,7 @@ library("RColorBrewer")
 library("AnnotationDbi")
 library("org.Hs.eg.db")
 library("ggplot2")
+library("tsne")
 ```
 
 #Read in Data
@@ -128,6 +129,11 @@ pheatmap(assay(vsd.LRT500), cluster_rows=T, show_rownames=FALSE,cluster_cols=T, 
 pheatmap(assay(rld.LRT500), cluster_rows=T, show_rownames=FALSE,cluster_cols=T, color=colors, scale="row")
 ```
 
+#tsne
+
+```{r, message=FALSE}
+tsne<- tsne(assay(vsd))
+```
 
 
 
